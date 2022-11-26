@@ -17,3 +17,5 @@ Run executable file
 ./app.exe
 ```
 Then open http://localhost:8080/hi, you should see "Hello world". 
+
+Tested on 0.11.2 version of `cpp-httplib`

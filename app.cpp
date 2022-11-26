@@ -1,33 +1,10 @@
 #include "httplib.h"
+#include "utils.h"
 #include <iostream>
+#include <string>
 
-const auto html = R"(
-                    <!DOCTYPE html>
-                    <html lang="en">
-                        <head>
-                            <meta charset="UTF-8">
-                            <title>Test</title>
-                            <link rel="stylesheet" href="styles.css">
-                        </head>
-
-                        <body>
-                            <h1>My First Heading</h1>
-                            <p>My first paragraph</p>
-                        </body>
-                    </html>
-)";
-
-const auto style = R"(
-                    body {
-                        background-color: powderblue;
-                    }
-                    h1 {
-                        color: blue;
-                    }
-                    p {
-                        color: red;
-                    }
-)";
+const auto html = load_file("index.html");
+const auto style = load_file("styles.css");
 
 int main()
 {
