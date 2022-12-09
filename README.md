@@ -22,6 +22,8 @@ Run executable file
 ```
 Then open http://localhost:8080/hi, you should see "Hello world". 
 
+Also, you can build and run `client.cpp` to check if the server is running
+
 > Tested on 0.11.2 version of `cpp-httplib`
 
 ## Add html and css
@@ -29,4 +31,14 @@ Use `load_file` from `utils.h` to create your web page:
 ```
 const auto html = load_file("index.html");
 const auto style = load_file("styles.css");
+```
+
+## Using ngrok
+If you want to temporarily publish your webpage in internet, you can use ngrok. First of all, you need to install ngrok. Then add your token. And write this to start microservice:
+```
+ngrok http 8080
+```
+And run server in other terminal:
+```
+./app.exe
 ```
