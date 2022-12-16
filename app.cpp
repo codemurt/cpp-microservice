@@ -5,6 +5,7 @@
 
 const auto html = load_file("index.html");
 const auto style = load_file("styles.css");
+const auto js = load_file("script.js");
 
 int main()
 {
@@ -18,6 +19,10 @@ int main()
 
     svr.Get("/styles.css", [&](const Request& req, Response& res) {
         res.set_content(style, "text/css");
+    });
+
+    svr.Get("/script.js", [&](const Request& req, Response& res) {
+        res.set_content(js, "application/javascript");
     });
 
     svr.Get("/hi", [](const Request& req, Response& res) {

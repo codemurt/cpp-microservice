@@ -26,11 +26,12 @@ Also, you can build and run `client.cpp` to check if the server is running
 
 > Tested on 0.11.2 version of `cpp-httplib`
 
-## Add html and css
+## Add html, css and js
 Use `load_file` from `utils.h` to create your web page:
 ```
 const auto html = load_file("index.html");
 const auto style = load_file("styles.css");
+const auto js = load_file("script.js");
 ```
 
 ## Using ngrok
@@ -42,3 +43,4 @@ And run server in other terminal:
 ```
 ./app.exe
 ```
+In https://dashboard.ngrok.com/cloud-edge/endpoints you will see your link to endpoint.
