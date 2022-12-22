@@ -1,5 +1,8 @@
 # cpp-microservice
 ## Getting started
+
+![](video.mp4)
+
 Clone this repository. Then you need to clone `cpp-httplib`:
 ```
 git clone https://github.com/yhirose/cpp-httplib.git
